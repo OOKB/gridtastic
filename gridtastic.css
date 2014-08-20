@@ -2,6 +2,20 @@
 /*-------->>>> Gridtastic! A CSS Framework that cares about continuous gutters <<<<------------*/
 /*---------------------------------------------------------------------------------------------*/
 
+* {
+  box-sizing: border-box;
+}
+
+/** setup container and row styles **/
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0 -15px;
+}
+
 /** set default column styles **/
 [class*="col-"] {
   float: left;
@@ -24,3 +38,9 @@
 .col-10 { width: 83.33333333333%; }
 .col-11 { width: 91.66666666666%; }
 .col-12 { width: 100%; }
+
+/* this makes all columns inside of a col-1 just as wide as a col-1 — no subdividing... **/
+/* we'll have to figure out how to expand this to the other classes/subdivisions */
+.col-1 [class*="col-"] {
+  width: 100%;
+}
