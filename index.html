@@ -8,6 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="gridtastic.css" rel="stylesheet">
+    <link href="bggrid.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,28 +18,105 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Gridtastic</h1>
+    <div id="wrapper">
+      <h1>Gridtastic</h1>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-1">Col 1
-          <div class="row">
-            <div class="col-2">Col 2</div>
-            <div class="col-3">Col 3</div>
-            <div class="col-4">Col 4</div>
-            <div class="col-1">Col 1</div>
-            <div class="col-1">Col 1</div>
+      <div class="container">
+
+        <div class="row cf">
+          <div class="col-1">Col 1
+            <div class="row">
+              <div class="col-2">Col 2</div>
+              <div class="col-3">Col 3</div>
+              <div class="col-4">Col 4</div>
+              <div class="col-1">Col 1</div>
+              <div class="col-1">Col 1</div>
+            </div>
+          </div>
+          <div class="col-2">Col 2</div>
+          <div class="col-3">Col 3</div>
+          <div class="col-4">Col 4</div>
+          <div class="col-1">Col 1</div>
+          <div class="col-1">Col 1</div>
+        </div>
+
+        <div class="row cf">
+          <div class="col-2">Col 5</div>
+          <div class="col-4">Col 1</div>
+          <div class="col-6">Col 6
+            <div class="row">
+              <div class="col-2">Col 2</div>
+              <div class="col-3">Col 3</div>
+              <div class="col-4">Col 4</div>
+              <div class="col-1">Col 1</div>
+              <div class="col-1">Col 1</div>
+            </div>
           </div>
         </div>
-        <div class="col-2">Col 2</div>
-        <div class="col-3">Col 3</div>
-        <div class="col-4">Col 4</div>
-        <div class="col-1">Col 1</div>
-        <div class="col-1">Col 1</div>
+
+        <div class="row cf">
+          <div class="col-1">Col 1
+            <div class="row">
+              <div class="col-2">Col 2</div>
+              <div class="col-3">Col 3</div>
+              <div class="col-4">Col 4</div>
+              <div class="col-1">Col 1</div>
+              <div class="col-1">Col 1</div>
+            </div>
+          </div>
+          <div class="col-2">Col 2</div>
+          <div class="col-3">Col 3</div>
+          <div class="col-4">Col 4</div>
+          <div class="col-1">Col 1</div>
+          <div class="col-1">Col 1</div>
+        </div>
+
+        <div class="row cf">
+          <div class="col-2">Col 5</div>
+          <div class="col-4">Col 1</div>
+          <div class="col-6">Col 6
+            <div class="row">
+              <div class="col-2">Col 2</div>
+              <div class="col-3">Col 3</div>
+              <div class="col-4">Col 4</div>
+              <div class="col-1">Col 1</div>
+              <div class="col-1">Col 1</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- this html is just here to create a visual reference grid in the background -->
+    <div id="bggrid">
+      <div class="container">
+        <div class="row cf">
+          <div class="col-1"><div>Col 1</div></div>
+          <div class="col-1"><div>Col 2</div></div>
+          <div class="col-1"><div>Col 3</div></div>
+          <div class="col-1"><div>Col 4</div></div>
+          <div class="col-1"><div>Col 5</div></div>
+          <div class="col-1"><div>Col 6</div></div>
+          <div class="col-1"><div>Col 7</div></div>
+          <div class="col-1"><div>Col 8</div></div>
+          <div class="col-1"><div>Col 9</div></div>
+          <div class="col-1"><div>Col 10</div></div>
+          <div class="col-1"><div>Col 11</div></div>
+          <div class="col-1"><div>Col 12</div></div>
+        </div>
       </div>
     </div>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- some JS to make the visual reference columns the full height of the browser window -->
+    <script>
+      $('#bggrid .col-1').each(function() {
+        var wh = $(window).height();
+        $(this).height(wh+60);
+      });
+    </script>
   </body>
 </html>

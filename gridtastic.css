@@ -6,6 +6,33 @@
   box-sizing: border-box;
 }
 
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+
 /** setup container and row styles **/
 .container {
   width: 100%;
@@ -13,7 +40,7 @@
 }
 
 .row {
-  margin: 0 -15px;
+  margin: 15px -15px;
 }
 
 /** set default column styles **/
@@ -26,6 +53,8 @@
   padding-left: 15px;
 }
 
+/* this is basic default widths... */
+/* will be adjusted as we move forward when something is inside something else*/
 .col-1  { width:  8.33333333333%; }
 .col-2  { width: 16.66666666666%; }
 .col-3  { width: 25%; }
@@ -44,3 +73,31 @@
 .col-1 [class*="col-"] {
   width: 100%;
 }
+
+/* columns tweaks so they continue to line up */
+.col-6 .col-1,
+.col-6 .col-2 {
+  width: 16.66666666666%;
+}
+
+.col-6 .col-3,
+.col-6 .col-4 {
+  width: 33.33333333333%;
+}
+
+/* temporarily provide background colors to see how things are being applied. */
+.row    { background-color: WhiteSmoke; }
+.col-1  { background-color: orchid; }
+.col-2  { background-color: palegoldenrod; }
+.col-3  { background-color: palegreen; }
+.col-4  { background-color: paleturquoise; }
+.col-5  { background-color: palevioletred; }
+.col-6  { background-color: papayawhip; }
+.col-7  { background-color: peru; }
+.col-8  { background-color: pink; }
+.col-9  { background-color: plum; }
+.col-10 { background-color: powderblue; }
+.col-11 { background-color: purple; }
+.col-12 { background-color: rosybrown; }
+
+
