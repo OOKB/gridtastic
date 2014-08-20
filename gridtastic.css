@@ -40,7 +40,10 @@
 }
 
 .row {
-  margin: 15px -15px;
+  margin: 30px -15px;
+}
+[class*="col-"] .row {
+  margin: 0 -15px;
 }
 
 /** set default column styles **/
@@ -86,7 +89,8 @@
 }
 
 /* temporarily provide background colors to see how things are being applied. */
-.row    { background-color: WhiteSmoke; }
+.row    { background-color: rgba(0,0,0,.1); }
+/*
 .col-1  { background-color: orchid; }
 .col-2  { background-color: palegoldenrod; }
 .col-3  { background-color: palegreen; }
@@ -99,5 +103,6 @@
 .col-10 { background-color: powderblue; }
 .col-11 { background-color: purple; }
 .col-12 { background-color: rosybrown; }
+*/
 
 
