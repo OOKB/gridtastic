@@ -40,10 +40,10 @@
 }
 
 .row {
-  margin: 30px -15px;
+  margin: 1.5em -.75em;
 }
 [class*="col-"] .row {
-  margin: 0 -15px;
+  margin: 0 -.75em;
 }
 
 /** set default column styles **/
@@ -51,9 +51,10 @@
   float: left;
   position: relative;
   min-height: 1px;
-  /** padding of 15px on each side creates 30px gutters **/
-  padding-right: 15px;
-  padding-left: 15px;
+  /** padding of .75em on each side creates nice 1.5em gutters that then will get biggere/smaller as type sizes increase/decrease **/
+  /** allows for better "adaptive" styling AND matching of gutter widths to line-heights **/
+  padding-right: .75em;
+  padding-left: .75em;
 }
 
 /* this is basic default widths... */
@@ -91,9 +92,9 @@
 /* temporarily provide background colors and some bordering to see how things are being applied. */
 .row    { background-color: rgba(0,0,0,.1); }
 [class*="col-"] {
-  border-top: 10px solid black;
-  padding-top: 10px;
-  margin-bottom: 10px;
+  border-top: .5em solid black;
+  padding-top: .5em;
+  margin-bottom: .5em;
 }
 /*
 .col-1  { background-color: orchid; }

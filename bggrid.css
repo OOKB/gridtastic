@@ -1,13 +1,13 @@
 html, body { height: 100%; width: 100%; margin: 0; padding: 0;}
 
-#wrapper { margin: 0 15px;}
+#wrapper { margin: 0 .75em;}
 
 #bggrid {
   position: fixed;
   top:0;
-  right:15px;
+  right: .75em;
   bottom:0;
-  left:15px;
+  left: .75em;
   z-index: -1;
   opacity: .1;
   margin: 0;
